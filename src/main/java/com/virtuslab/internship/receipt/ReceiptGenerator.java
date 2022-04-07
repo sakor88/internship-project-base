@@ -3,7 +3,7 @@ package com.virtuslab.internship.receipt;
 import com.virtuslab.internship.basket.Basket;
 import com.virtuslab.internship.product.Product;
 
-import java.math.BigDecimal;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -14,7 +14,7 @@ public class ReceiptGenerator {
     public Receipt generate(Basket basket) {
         List<ReceiptEntry> receiptEntries = new ArrayList<>();
         List<Product> productList = basket.getProducts();
-        Set<Product> productSet = new HashSet<Product>(productList);
+        Set<Product> productSet = new HashSet<>(productList);
         for (var prod : productSet){
             receiptEntries.add(new ReceiptEntry(prod, (int) productList
                     .stream()
